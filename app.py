@@ -70,12 +70,20 @@ def upload():
 
         # Arrange the correct return according to the model. 
 		# In this model 1 is Pneumonia and 0 is Normal.
-        str1 = 'Pneumonia'
-        str2 = 'Normal'
-        if preds == 1:
+        str1 = "DME"
+        str2 = "CNV"
+	str3="NORMAL"
+	str4="DRUSEN"
+        if preds == "DME"
             return str1
-        else:
+        elif preds == "CNV"
             return str2
+	elif preds=="NORMAL"
+	    return str3
+	elif preds=="DRUNSEN"
+	    return str4
+	else
+	    print("No OUTPUT")
     return None
 
     #this section is used by gunicorn to serve the app on Heroku
